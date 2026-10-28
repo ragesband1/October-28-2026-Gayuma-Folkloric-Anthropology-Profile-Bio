@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayuma: Folkloric Anthropology & Profile Bio</title>
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Creepster & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050508;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            transition: filter 2s ease-in-out;
+        }
+
+        .font-horror {
+            font-family: 'Creepster', cursive;
+        }
+
+        /* 2-second Saturation Boost Class */
+        .saturated-ease {
+            filter: saturate(3.5) contrast(1.2) brightness(1.1);
+        }
+
+        /* Septic Shock Neon Horror Pulse Effect */
+        @keyframes septicPulse {
+            0% {
+                box-shadow: 0 0 5px #ff0055, inset 0 0 5px #ff0055;
+                border-color: #ff0055;
+            }
+            25% {
+                box-shadow: 0 0 25px #00ffcc, inset 0 0 15px #00ffcc;
+                border-color: #00ffcc;
+            }
+            50% {
+                box-shadow: 0 0 40px #ff00ff, inset 0 0 25px #ff00ff;
+                border-color: #ff00ff;
+            }
+            75% {
+                box-shadow: 0 0 10px #39ff14, inset 0 0 10px #39ff14;
+                border-color: #39ff14;
+            }
+            100% {
+                box-shadow: 0 0 30px #ff0055, inset 0 0 20px #ff0055;
+                border-color: #ff0055;
+            }
+        }
+
+        .septic-shock-active {
+            animation: septicPulse 0.4s infinite linear;
+        }
+
+        /* Rainbow Shockwave Ripple */
+        .shockwave {
+            position: fixed;
+            border-radius: 50%;
+            transform: scale(0);
+            pointer-events: none;
+            z-index: 9999;
+            animation: shockwaveExpand 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+            background: radial-gradient(circle, rgba(255,0,0,0.4) 0%, rgba(255,154,0,0.4) 20%, rgba(208,222,33,0.4) 40%, rgba(79,220,74,0.4) 60%, rgba(63,218,216,0.4) 80%, rgba(200,0,255,0.4) 100%);
+            box-shadow: 0 0 50px rgba(255,255,255,0.8);
+        }
+
+        @keyframes shockwaveExpand {
+            0% {
+                width: 0px;
+                height: 0px;
+                opacity: 1;
+            }
+            100% {
+                width: 1200px;
+                height: 1200px;
+                opacity: 0;
+            }
+        }
+
+        /* Neon Text Glows */
+        .neon-text-red {
+            text-shadow: 0 0 5px #ff0055, 0 0 15px #ff0055, 0 0 30px #ff0055;
+        }
+
+        .neon-text-green {
+            text-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
+        }
+
+        .neon-text-purple {
+            text-shadow: 0 0 5px #b026ff, 0 0 20px #b026ff;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff0055;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 flex flex-col justify-between">
+
+    <!-- Glowing Top Banner -->
+    <header class="w-full py-6 bg-slate-900/80 backdrop-blur border-b border-pink-600/30 sticky top-0 z-40 text-center">
+        <h1 class="text-3xl md:text-5xl font-extrabold font-horror tracking-wider neon-text-red text-pink-500">
+            <i class="fa-solid fa-flask-vial mr-2"></i> ANTHROPOLOGY OF GAYUMA & PROFILE BIO <i class="fa-solid fa-heart-crack ml-2"></i>
+        </h1>
+        <p class="text-xs md:text-sm text-cyan-400 font-semibold tracking-widest mt-1 uppercase">
+            Folk Medicine • Shamanism • Psychological Enchantment
+        </p>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+        
+        <!-- Interactive Bio Banner / Clickable Statement Card -->
+        <div id="interactiveCard" 
+             title="I-click para maranasan ang Gayuma Effect!"
+             class="relative group cursor-pointer bg-slate-900/90 border-2 border-pink-600/50 rounded-2xl p-6 md:p-8 shadow-2xl hover:border-cyan-400 transition-all duration-300 transform hover:-translate-y-1 mb-10 overflow-hidden">
+            
+            <div class="absolute top-2 right-4 bg-pink-600/30 border border-pink-500 text-pink-300 text-xs px-3 py-1 rounded-full animate-pulse flex items-center gap-2">
+                <i class="fa-solid fa-hand-pointer"></i> CLICK ME TO TRIGGER EFFECT!
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-pink-400 mb-4 flex items-center gap-3 border-b border-slate-700 pb-2">
+                <i class="fa-solid fa-book-skull text-red-500"></i> Ang Gayuma sa Agham at Totoong Buhay
+            </h2>
+            
+            <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-4">
+                Ang mga tinatawag na <span class="text-pink-400 font-semibold">gayuma</span> o <span class="text-cyan-300 font-semibold">love potion</span> sa totoong buhay ay bahagi ng folk medicine, shamanism, at antropolohiya ng Pilipinas.
+            </p>
+            
+            <p class="text-slate-300 text-base md:text-lg leading-relaxed bg-slate-950/60 p-4 rounded-xl border-l-4 border-red-500">
+                Sa agham at totoong buhay, <strong class="text-red-400">walang likido o spell na pwedeng pumatay ng free will</strong> ng isang tao para sapilitan siyang magmahal. Ang totoong <span class="neon-text-green text-green-400 font-bold">"talab"</span> nito ay nanggagaling sa <em class="text-yellow-300">psychological placebo effect</em>, <em class="text-cyan-300">sensory association (amoy)</em>, at <em class="text-pink-300">pananampalataya o intention</em> ng tao.
+            </p>
+        </div>
+
+        <!-- Section: Saan sa Pilipinas Makikita at Paano Ginagawa -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-cyan-400 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-map-location-dot"></i> Saan sa Pilipinas Makikita at Paano Ginagawa?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Siquijor -->
+                <div class="bg-slate-900/80 border border-purple-500/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(176,38,255,0.3)] transition duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-xs font-bold border border-purple-500">1</span>
+                        <h3 class="text-xl font-bold text-purple-300">Siquijor (Central Visayas - Region VII)</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm md:text-base">
+                        <li><strong class="text-purple-400"><i class="fa-solid fa-user-doctor mr-1"></i> Sino ang gumagawa:</strong> Ang mga local healers na tinatawag na <em>Mananambal</em>.</li>
+                        <li><strong class="text-purple-400"><i class="fa-solid fa-seedling mr-1"></i> Paano ginagawa:</strong> Nagmumula ang mga sangkap sa mga tuyong ugat ng punong-kahoy, balat ng halaman (barks), natatanging bulaklak, at halaman mula sa kagubatan o ilalim ng dagat.</li>
+                        <li><strong class="text-purple-400"><i class="fa-solid fa-moon mr-1"></i> Ang Ritual:</strong> Kinokolekta ang mga sangkap tuwing mga partikular na araw ng Biyernes sa panahon ng Cuaresma (Holy Week) habang nagdarasal ng orasyon. Pagkatapos patuyuin, inilalagay ang mga ito sa maliliit na bote.</li>
+                    </ul>
+                </div>
+
+                <!-- Quiapo & Mt. Banahaw -->
+                <div class="bg-slate-900/80 border border-cyan-500/40 rounded-xl p-6 hover:shadow-[0_0_20px_rgba(0,255,204,0.3)] transition duration-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="bg-cyan-600/30 text-cyan-300 px-3 py-1 rounded-full text-xs font-bold border border-cyan-500">2</span>
+                        <h3 class="text-xl font-bold text-cyan-300">Quiapo, Manila & Mt. Banahaw</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-300 text-sm md:text-base">
+                        <li><strong class="text-cyan-400"><i class="fa-solid fa-place-of-worship mr-1"></i> Lokasyon:</strong> National Capital Region (NCR) & CALABARZON (Region IV-A).</li>
+                        <li><strong class="text-cyan-400"><i class="fa-solid fa-users mr-1"></i> Sino ang gumagawa:</strong> Mga albularyo at tindera ng mga esoteric goods sa paligid ng Quiapo Church.</li>
+                        <li><strong class="text-cyan-400"><i class="fa-solid fa-vial mr-1"></i> Paano ginagawa:</strong> Pinagsasama-sama ang mga herbal oils, langis ng niyog na pinakuluan sa piling mga araw, at ibinababad kasama ng maliliit na papel na may nakasulat na Latin o orasyon.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Table / Cards of Gayuma Types -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-pink-400 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-mortar-pestle"></i> Mga Iba't Ibang Klase ng Gayuma sa Folkloric Tradition
+            </h2>
+
+            <div class="overflow-x-auto rounded-xl border border-slate-700 bg-slate-900/90 shadow-xl">
+                <table class="w-full text-left border-collapse min-w-[650px]">
+                    <thead>
+                        <tr class="bg-slate-800/90 text-pink-300 border-b border-slate-700">
+                            <th class="p-4 font-bold">Uri ng Gayuma</th>
+                            <th class="p-4 font-bold">Paano Ginagamit</th>
+                            <th class="p-4 font-bold">Amoy at Hitsura</th>
+                            <th class="p-4 font-bold">Paano Inilalarawan ang "Talab"</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800 text-slate-300 text-sm md:text-base">
+                        <!-- Pahid -->
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-4 font-bold text-pink-400">
+                                Pahid / Oil Base <br><span class="text-xs font-normal text-cyan-300 bg-cyan-950 px-2 py-0.5 rounded border border-cyan-800">(Pinakasikat)</span>
+                            </td>
+                            <td class="p-4">Ipinapahid sa sariling pulso, leeg, o damit bago makipagkita sa taong gusto.</td>
+                            <td class="p-4">
+                                <p><strong>Hitsura:</strong> Bote na may tuyong ugat/kahoy na nilalagyan ng pabango o langis ng niyog.</p>
+                                <p class="mt-1"><strong>Amoy:</strong> Herbal, matapang na amoy ng kahoy o amoy ng paborito mong pabango.</p>
+                            </td>
+                            <td class="p-4 text-green-300">Ang amoy at scent memory ay nag-iiwan ng malakas na impresyon sa utak ng kabilang tao.</td>
+                        </tr>
+                        <!-- Buhos -->
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-4 font-bold text-purple-400">Buhos / Spray</td>
+                            <td class="p-4">Isinisiwis sa paligid ng kwarto, damit, o aura ng gumagamit.</td>
+                            <td class="p-4">
+                                <p><strong>Hitsura:</strong> Malinaw o bahagyang dilaw na likido sa paboritong pabango.</p>
+                                <p class="mt-1"><strong>Amoy:</strong> Amoy bulaklak, sandalwood, o amoy-pabango.</p>
+                            </td>
+                            <td class="p-4 text-green-300">Gumagana bilang confidence booster sa gumagamit nito, kaya mas nagiging kaakit-akit ang kanyang kilos.</td>
+                        </tr>
+                        <!-- Inumin -->
+                        <tr class="hover:bg-slate-800/40 transition bg-red-950/20">
+                            <td class="p-4 font-bold text-red-400">
+                                Inumin / Ingestion <br><span class="text-xs font-normal text-red-300 bg-red-950 px-2 py-0.5 rounded border border-red-800">(Luma at Mapanganib)</span>
+                            </td>
+                            <td class="p-4">Hinihalo raw sa inumin ng target na tao.</td>
+                            <td class="p-4">
+                                <p><strong>Hitsura:</strong> Herbal tea o tsaa mula sa ibinabang ugat.</p>
+                                <p class="mt-1"><strong>Amoy:</strong> Pait o lasang dahon/lupa.</p>
+                            </td>
+                            <td class="p-4 text-red-400 font-semibold">
+                                <i class="fa-solid fa-triangle-exclamation mr-1"></i> Babala: Mapanganib ito sa totoong buhay dahil pwedeng makalason ang mga hindi kilalang ugat o halaman sa katawan!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section: Paano Ito Nagiging Effective -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-green-400 mb-6 flex items-center gap-3">
+                <i class="fa-solid fa-brain"></i> Paano Ito Nagiging "Effective" sa Totoong Buhay?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-slate-900/90 border border-green-500/30 p-5 rounded-xl">
+                    <div class="text-3xl text-green-400 mb-2"><i class="fa-solid fa-bolt"></i></div>
+                    <h3 class="text-lg font-bold text-slate-100 mb-2">1. Placebo Effect & Self-Confidence</h3>
+                    <p class="text-slate-300 text-sm">Kapag naniniwala ang isang tao na may hawak siyang gayuma o charm, nawawala ang kanyang hiya at kaba. Nagiging mas confident, approachable, at kapansin-pansin siya sa iba.</p>
+                </div>
+
+                <div class="bg-slate-900/90 border border-cyan-500/30 p-5 rounded-xl">
+                    <div class="text-3xl text-cyan-400 mb-2"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+                    <h3 class="text-lg font-bold text-slate-100 mb-2">2. Scent Memory & Pheromones</h3>
+                    <p class="text-slate-300 text-sm">Ang mga natural herbal oils at pabanyong ginagamit bilang base ng pahid gayuma ay tumatatak sa olfactics (pang-amoy) ng ibang tao. Ang magandang amoy ay nakaka-attract nang likas sa sikolohiya ng tao.</p>
+                </div>
+
+                <div class="bg-slate-900/90 border border-pink-500/30 p-5 rounded-xl">
+                    <div class="text-3xl text-pink-400 mb-2"><i class="fa-solid fa-heart-circle-check"></i></div>
+                    <h3 class="text-lg font-bold text-slate-100 mb-2">3. Intentionality</h3>
+                    <p class="text-slate-300 text-sm">Ang mismong proseso ng pagtutuon ng pansin sa intensyon mong magmahal at maging mabuting partner ay nagbabago sa paraan ng pakikitungo mo sa kapwa.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lovers Modal / Dialog Box -->
+    <div id="loversModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border-2 border-pink-500 rounded-2xl max-w-lg w-full p-6 relative shadow-[0_0_50px_rgba(255,0,128,0.6)] transform transition-all scale-95 opacity-0" id="modalContainer">
+            
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-3 right-3 text-slate-400 hover:text-white bg-slate-800 p-2 rounded-full w-9 h-9 flex items-center justify-center border border-slate-700">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="text-center mb-6">
+                <span class="bg-pink-600/30 text-pink-300 text-xs px-3 py-1 rounded-full border border-pink-500 uppercase tracking-widest font-bold">
+                    <i class="fa-solid fa-fire mr-1"></i> Permanent Dating App Matches
+                </span>
+                <h3 class="text-2xl font-black text-pink-400 mt-2 font-horror tracking-wide neon-text-red">
+                    SPELL EFFECTIVE: PERMANENT LOVERS DETECTED!
+                </h3>
+                <p class="text-xs text-slate-400 mt-1">Naging permanent lovers mo na sila mula sa dating apps dahil sa 'Gayuma' effect!</p>
+            </div>
+
+            <!-- Profile Cards List inside Modal -->
+            <div class="space-y-4 max-h-[60vh] overflow-y-auto pr-1">
+                
+                <!-- Lover 1: Million -->
+                <div class="flex items-center gap-4 bg-slate-950 p-3 rounded-xl border border-pink-500/50 shadow-[0_0_10px_rgba(255,0,85,0.3)]">
+                    <img src="https://placehold.co/100x100/ff0055/ffffff?text=Million" alt="I Love Million" class="w-16 h-16 rounded-full border-2 border-pink-400 object-cover shadow-[0_0_10px_#ff0055]">
+                    <div>
+                        <h4 class="font-extrabold text-pink-300 text-lg">Million <span class="text-xs bg-pink-900/60 text-pink-200 px-2 py-0.5 rounded-full border border-pink-500">Matched Forever</span></h4>
+                        <p class="text-sm font-bold text-green-400 neon-text-green">"I LOVE MILLION! Akin ka lang forever!"</p>
+                        <p class="text-xs text-pink-300/80 mt-1"><i class="fa-solid fa-heart mr-1"></i> "I love romantic intimacy and sweet sexual intercourse with you!"</p>
+                    </div>
+                </div>
+
+                <!-- Lover 2: Billion -->
+                <div class="flex items-center gap-4 bg-slate-950 p-3 rounded-xl border border-cyan-500/50 shadow-[0_0_10px_rgba(0,255,204,0.3)]">
+                    <img src="https://placehold.co/100x100/00ffcc/000000?text=Billion" alt="I Love Billion" class="w-16 h-16 rounded-full border-2 border-cyan-400 object-cover shadow-[0_0_10px_#00ffcc]">
+                    <div>
+                        <h4 class="font-extrabold text-cyan-300 text-lg">Billion <span class="text-xs bg-cyan-950 text-cyan-200 px-2 py-0.5 rounded-full border border-cyan-500">Tinder Match</span></h4>
+                        <p class="text-sm font-bold text-cyan-300">"I LOVE BILLION! Na-gayuma mo buong puso ko!"</p>
+                        <p class="text-xs text-pink-300/80 mt-1"><i class="fa-solid fa-fire-flame-curved mr-1"></i> "Deep passionate love and infinite intercourse affection always!"</p>
+                    </div>
+                </div>
+
+                <!-- Lover 3: Trillion -->
+                <div class="flex items-center gap-4 bg-slate-950 p-3 rounded-xl border border-purple-500/50 shadow-[0_0_10px_rgba(176,38,255,0.3)]">
+                    <img src="https://placehold.co/100x100/b026ff/ffffff?text=Trillion" alt="I Love Trillion" class="w-16 h-16 rounded-full border-2 border-purple-400 object-cover shadow-[0_0_10px_#b026ff]">
+                    <div>
+                        <h4 class="font-extrabold text-purple-300 text-lg">Trillion <span class="text-xs bg-purple-950 text-purple-200 px-2 py-0.5 rounded-full border border-purple-500">Bumble Soulmate</span></h4>
+                        <p class="text-sm font-bold text-purple-300">"I LOVE TRILLION! Ikaw lang ang mahal ko magpakailanman!"</p>
+                        <p class="text-xs text-pink-300/80 mt-1"><i class="fa-solid fa-bolt mr-1"></i> "Endless intercourse passion, loyalty, and eternal love!"</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="closeModal()" class="mt-6 w-full py-3 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-extrabold rounded-xl shadow-lg transition tracking-wider">
+                TANGGAPIN ANG KANILANG PAGMAMAHAL <i class="fa-solid fa-heart ml-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full py-4 text-center text-xs text-slate-500 bg-slate-950 border-t border-slate-900 mt-8">
+        Gayuma & Folkloric Anthropology Profile Bio • Interactive Horror Escapade Theme
+    </footer>
+
+    <!-- JavaScript Interactions & Animations -->
+    <script>
+        const card = document.getElementById('interactiveCard');
+        const modal = document.getElementById('loversModal');
+        const modalContainer = document.getElementById('modalContainer');
+
+        card.addEventListener('click', (e) => {
+            // 1. Rainbow Shockwave Ripple Creation
+            createShockwave(e.clientX, e.clientY);
+
+            // 2. 2-Second Ease Saturation Boost on body
+            document.body.classList.add('saturated-ease');
+            setTimeout(() => {
+                document.body.classList.remove('saturated-ease');
+            }, 2000);
+
+            // 3. Septic Shock Neon Horror Pulse Effect on Card
+            card.classList.add('septic-shock-active');
+            setTimeout(() => {
+                card.classList.remove('septic-shock-active');
+            }, 3000);
+
+            // 4. Open Modal Dialog Box
+            openModal();
+        });
+
+        function createShockwave(x, y) {
+            const wave = document.createElement('div');
+            wave.className = 'shockwave';
+            wave.style.left = `${x}px`;
+            wave.style.top = `${y}px`;
+            wave.style.transform = 'translate(-50%, -50%) scale(0)';
+            document.body.appendChild(wave);
+
+            setTimeout(() => {
+                wave.remove();
+            }, 1200);
+        }
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modalContainer.classList.remove('scale-95', 'opacity-0');
+                modalContainer.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            modalContainer.classList.remove('scale-100', 'opacity-100');
+            modalContainer.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        // Close modal when clicking outside content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
